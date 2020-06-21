@@ -13,11 +13,11 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new
+    @list = List.new(list_params)
     @list.name = params[:list][:name]
     @list.save
 
-    redirect_to list_path(@list)
+    redirect_to list_url(@list)
   end
 
 
@@ -26,4 +26,9 @@ class ListsController < ApplicationController
   def find_list
     @list = List.find(params[:id])
   end
+
+  def list_params # strong params pattern
+    params.require(:list).permit(:name)
+  end
+
 end
