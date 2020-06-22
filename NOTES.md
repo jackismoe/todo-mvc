@@ -25,7 +25,7 @@ https://github.com/tastejs/todomvc/tree/gh-pages
   - does impact my URLs
     -yes, need a new URL: lists/1
 
-# [] Step 3: Add Items to a List
+# [x] Step 3: Add Items to a List
   - make items in a list real
     - list has many items
     - every item has a list
@@ -48,11 +48,21 @@ https://github.com/tastejs/todomvc/tree/gh-pages
     an item doesnt exist in our application outside of the context of the list is belongs to
     Nested Resource - Items are nested in terms of URLs under their parent
 
-# [] Step 4: Adding Validations
+# [x] Step 4: Adding Validations
   - Validate that lists have names
   - Validate that items have a description
 
+# [] Step 5: Add state (complete, incomplete) to Items in a list
+  - Mark items as complete or incomplete
 
+# [] Step 6: Delete Items from list
+
+
+  
+# [] Misc:
+  - fix dropdown arrow on make a list option
+  
+  
   - does it impact my DB
     - probably need an items table associated with a list
   - does impact my URLs
@@ -66,6 +76,3 @@ lists
 
 item
   belongs to a list
-
-# Misc:
-  - fix dropdown arrow on make a list option
