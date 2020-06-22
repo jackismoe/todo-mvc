@@ -10,6 +10,7 @@ class ListsController < ApplicationController
     # which list?
     # params has all the data passed by a user
     find_list
+    @item = @list.items.build
   end
 
   def create
