@@ -6,7 +6,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       # wiring the schema with foriegn id
       # wite the model with association
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
