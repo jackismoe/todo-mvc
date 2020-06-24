@@ -11,10 +11,11 @@
     <ul class="todo-list">
       <% @lists.each do |list| %>
         <li>
-        <div class="view">
-          <label><%= link_to list.name, list_path(list) %></label>
-        </div>
-      </li>
+          <div class="view">
+            <input class="toggle" type="checkbox">
+            <label><%= link_to list.name, list_path(list) %></label>
+          </div>
+        </li>
       <% end %>
     </ul>
   </section>

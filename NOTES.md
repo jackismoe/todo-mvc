@@ -16,7 +16,9 @@ I want people to be able to create lists. Then they should be able to add items 
     - i need a model
     - i need a controller
     - i should generate a resource
-      `rails g resource list name`
+  ```shell
+    rails g resource list name
+  ```
 
 # [x] Step 3: Add Items to a List
   - make items in a list real
@@ -26,7 +28,9 @@ I want people to be able to create lists. Then they should be able to add items 
     CREATE action for an item in a list - What is the url/http method for that?
       - the form is already present in the show page
       - what URL does this imply?
-        post /lists/:id/items
+      ```
+        `post /lists/:id/items`
+      ```
     an item doesn't exist in our application outside of the context of the list is belongs to
     - Nested Resource - Items are nested in terms of URLs under their parent
 
@@ -36,6 +40,25 @@ I want people to be able to create lists. Then they should be able to add items 
 
 # [] Step 5: Add state (complete, incomplete) to Items in a list
   - Mark items as complete or incomplete
+
+  what urls do i need & how mght my database change?
+  new form for updating the status of the item - which means new url
+  `/lists/1/items`
+    anything that changes an item should be a PUT/PATCH request to `/lists/1/items/1` (`/lists/:id/items/:id`)
+  i know i need to steal the checkbox html from todomvc.com
+    add this to view
+    ```html
+      <input class="toggle" type="checkbox">
+    ```
+
+    i need js function to submit the form when you click the check box
+      ```javascript
+      $(function(){
+        $("input.toggle").on("change", function(){
+          $(this).parents("form").trigger("submit")
+        })
+      });
+      ```
 
 # [] Step 6: Delete Items from list
 
